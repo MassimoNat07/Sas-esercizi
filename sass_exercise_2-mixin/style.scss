@@ -1,0 +1,44 @@
+@mixin article-style ($color, $border-color: green){
+    color: $color;
+    border: 1px solid $border-color;
+    font-size: 1rem;
+ 
+}
+
+
+div{
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    h1{
+        color: rgb(2, 181, 2);
+        text-decoration: underline rgb(129, 12, 142);
+        display: flex;
+        justify-content: center;
+    }
+    section{
+        border: 1px solid green;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        article:nth-child(odd){
+            @include article-style(red)
+        }
+
+        article:nth-child(even){
+            @include article-style(blue)
+        }
+        
+       
+    }
+    
+    p{
+        font-size: 1.2em;
+    }
+
+}
+
+
