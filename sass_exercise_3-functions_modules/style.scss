@@ -1,0 +1,101 @@
+
+  @function in-rem($style-in-rem){
+ $style-in-rem: calc($rem/16)+rem;
+ @return $rem;
+  }
+
+
+
+
+
+@mixin article-style($color, $border-color:green, $font-size: rem(16)){
+    color: $color;
+    border: rem(1) solid $border-color;
+    font-size: $font-size;
+    padding: rem(10);
+
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: rem(1) solid red;
+    h1{
+        border-bottom: rem(1) solid blue;
+        color: green;
+    }
+    section{
+        margin: rem(0) rem(15);
+        display: flex;
+        align-items: center;
+        article:nth-child(odd){
+            @include article-style(blue)
+        }
+        article:nth-child(even){
+            @include article-style(red)
+        }
+    }
+    section:last-child{
+        width: 100%;
+        margin: rem(15);
+        article{
+            margin: rem(0) rem(15);
+            text-align: center;
+            width: 100%;
+            @include article-style(green, blue, rem(24))
+        }
+    }
+}
+
+    
+    @mixin article-style ($color, $border-color: green,$font-size:1rem,$padding:1em){
+    color: $color;
+    border: 1px solid $border-color;
+    font-size: $font-size;
+    padding: $padding
+    }
+
+    div{
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    h1{
+        color: rgb(2, 181, 2);
+        text-decoration: underline rgb(129, 12, 142);
+        display: flex;
+        justify-content: center;
+    }
+    section{
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1em;
+        
+
+
+        article:nth-child(odd){
+            @include article-style(blue)
+        }
+
+        article:nth-child(even){
+            @include article-style(red)
+        }
+        
+       
+    }
+    section:last-child{
+        
+        article{
+            @include article-style(green, $border-color:blue, $font-size:24px);
+            width: 100%;
+           text-align: center;
+        }
+      }
+}
+
+
