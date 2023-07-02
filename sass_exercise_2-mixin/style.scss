@@ -1,7 +1,9 @@
-@mixin article-style ($color, $border-color: green){
+@mixin article-style ($color, $border-color: green,$font-size:1rem,$padding:1em){
     color: $color;
     border: 1px solid $border-color;
-    font-size: 1rem;
+    font-size: $font-size;
+    padding: $padding
+    
  
 }
 
@@ -19,25 +21,41 @@ div{
         justify-content: center;
     }
     section{
-        border: 1px solid green;
+       
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: 1em;
+        
+
 
         article:nth-child(odd){
-            @include article-style(red)
+            @include article-style(blue)
         }
 
         article:nth-child(even){
-            @include article-style(blue)
+            @include article-style(red)
         }
         
        
     }
-    
-    p{
-        font-size: 1.2em;
+    section:last-child{
+        
+        article{
+            @include article-style(green, $border-color:blue, $font-size:24px);
+            width: 100%;
+           text-align: center;
+
+           
+            
+        }
+     
+
     }
+
+    
+
+    
 
 }
 

@@ -14,24 +14,31 @@ div h1 {
 }
 
 div section {
-  border: 1px solid green;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 1em;
 }
 
 div section article:nth-child(odd) {
-  color: red;
-  border: 1px solid green;
-  font-size: 1rem;
-}
-
-div section article:nth-child(even) {
   color: blue;
   border: 1px solid green;
   font-size: 1rem;
+  padding: 1em;
 }
 
-div p {
-  font-size: 1.2em;
+div section article:nth-child(even) {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding: 1em;
+}
+
+div section:last-child article {
+  color: green;
+  border: 1px solid blue;
+  font-size: 24px;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
 }
