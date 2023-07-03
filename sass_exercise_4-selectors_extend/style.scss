@@ -1,0 +1,56 @@
+@function rem($number){
+    $rem: calc($number/16) +rem;
+    @return $rem;
+}
+
+%text{
+    color: green;
+}
+
+
+@mixin article-style($color, $border-color: green, $font-size: rem(16)){
+    color: $color;
+    border: rem(1) solid $border-color;
+    font-size: $font-size;
+    padding: rem(10);
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: rem(1) solid red;
+    & h1{
+        padding-top: rem(25);
+        @extend %text;
+        border-bottom: rem(1) solid blue;
+    }
+    & h2{
+        @extend %text;
+        border: rem(1) solid red;
+        padding: rem(16);
+    }
+    & section{
+        margin: rem(0) rem(15);
+        display: flex;
+        align-items: center;
+        & article:nth-child(odd){
+            @include article-style(blue)
+        }
+        & article:nth-child(even){
+            @include article-style(red)
+        }
+
+    }
+    & section:last-child{
+        width: 100%;
+        margin: rem(15);
+        & article{
+            width: 100%;
+            text-align: center;
+            margin: rem(0) rem(15);
+            @include article-style(green,blue, rem(24))
+        }
+    }
+}
