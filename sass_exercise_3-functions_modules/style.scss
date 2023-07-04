@@ -1,8 +1,8 @@
 
-  @function in-rem($style-in-rem){
- $style-in-rem: calc($rem/16)+rem;
- @return $rem;
-  }
+@function rem($rem){
+    @return calc($rem / 16) * 1rem;
+ 
+}
 
 
 
@@ -21,7 +21,7 @@ div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: rem(1) solid red;
+    border:rem(1) solid red;
     h1{
         border-bottom: rem(1) solid blue;
         color: green;

@@ -3,47 +3,41 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: rem(1) solid red;
+  border: 0.0625rem solid red;
 }
-
 div h1 {
-  border-bottom: rem(1) solid blue;
+  border-bottom: 0.0625rem solid blue;
   color: green;
 }
-
 div section {
-  margin: rem(0) rem(15);
+  margin: 0rem 0.9375rem;
   display: flex;
   align-items: center;
 }
-
 div section article:nth-child(odd) {
   color: blue;
-  border: rem(1) solid green;
-  font-size: rem(16);
-  padding: rem(10);
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 0.625rem;
 }
-
 div section article:nth-child(even) {
   color: red;
-  border: rem(1) solid green;
-  font-size: rem(16);
-  padding: rem(10);
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 0.625rem;
 }
-
 div section:last-child {
   width: 100%;
-  margin: rem(15);
+  margin: 0.9375rem;
 }
-
 div section:last-child article {
-  margin: rem(0) rem(15);
+  margin: 0rem 0.9375rem;
   text-align: center;
   width: 100%;
   color: green;
-  border: rem(1) solid blue;
-  font-size: rem(24);
-  padding: rem(10);
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
+  padding: 0.625rem;
 }
 
 div {
@@ -53,35 +47,30 @@ div {
   justify-content: center;
   padding: 1em;
 }
-
 div h1 {
-  color: #02b502;
-  text-decoration: underline #810c8e;
+  color: rgb(2, 181, 2);
+  text-decoration: underline rgb(129, 12, 142);
   display: flex;
   justify-content: center;
 }
-
 div section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 1em;
 }
-
 div section article:nth-child(odd) {
   color: blue;
   border: 1px solid green;
   font-size: 1rem;
   padding: 1em;
 }
-
 div section article:nth-child(even) {
   color: red;
   border: 1px solid green;
   font-size: 1rem;
   padding: 1em;
 }
-
 div section:last-child article {
   color: green;
   border: 1px solid blue;
@@ -90,3 +79,5 @@ div section:last-child article {
   width: 100%;
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */
