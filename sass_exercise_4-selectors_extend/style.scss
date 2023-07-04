@@ -1,6 +1,6 @@
 @function rem($number){
-    $rem: calc($number/16) +rem;
-    @return $rem;
+    @return($number/16) *1rem;
+   
 }
 
 %text{
